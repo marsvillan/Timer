@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer</title>
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="timer">
+          <div class="timer__title">Timer</div>
+          
+          <div class="timer__time">
+            <div class="timer__time-block">{{ timer__hours }}</div>
+            <div class="timer__time-block">{{ timer__minutes }}</div>
+            <div class="timer__time-block">{{ timer__seconds }}</div>
+          </div>
+          
+            <div class="message">{{timer_Finish}} </div>
+
+          <div class="control-panel">
+            <button class="control-panel__btn" v-on:click="add_25">25 min</button>
+            <button class="control-panel__btn" v-on:click="add_15">15 min</button>
+            <button class="control-panel__btn" v-on:click="add_5">5 min</button>
+          </div>
+      
+          <div class="timer__control-block">
+            <div class="row">
+            <button class="btn" v-on:click="AddHour">hour+</button>
+            <button class="btn" v-on:click="AddMinute">minute+</button>
+            <button class="btn" v-on:click="AddSecond">second+</button>
+            </div>
+            <div class="row">
+            <button class="btn" v-on:click="DelHour">hour-</button>
+            <button class="btn" v-on:click="DelMinute">minute-</button>
+            <button class="btn" v-on:click="DelSecond">second-</button>
+            </div>
+          </div>
+          
+          <div class="timer__control-block">
+            <button class="btn" v-on:click="BtnStart">start</button>
+            <button class="btn" v-on:click="BtnPause">pause</button>
+            <button class="btn" v-on:click="BtnReset">reset</button>
+          </div>
+          
+        </div>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+      <script src="timer.js"></script>   
+     
+</body>
+
+
+
+</html>
